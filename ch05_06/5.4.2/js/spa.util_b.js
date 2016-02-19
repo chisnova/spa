@@ -23,7 +23,7 @@ spa.util_b = (function () {
 		configMap = {
 			regex_encode_html 	: /[&"'><]/g,
 			regex_encode_noamp 	: /["'><]/g, 
-			html_encode_map  	: "value",  {
+			html_encode_map  	: {
             	'&' : '&#38;',
             	'"' : '&#34;',
             	"'" : '&#39;',
@@ -39,7 +39,7 @@ spa.util_b = (function () {
 	);
 	delete configMap.encode_noamp_map['&']; 
 	//----------------- 모듈 스코프 변수 끝---------------
-￼
+
 	//------------------- 유틸리티 메서드 시작------------------
 	// decodeHtml 시작
 	// HTML 엔티티를 브라우저 친화적으로 디코딩한다.
@@ -82,7 +82,7 @@ spa.util_b = (function () {
 	// em 크기를 픽셀값으로 반환
 	//
 	getEmSize = function ( elem ) {
-	￼	return Number(
+		return Number(
     		getComputedStyle( elem, '' ).fontSize.match(/\d*\.?\d*/)[0]
 		);
 	};

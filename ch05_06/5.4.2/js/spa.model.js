@@ -34,7 +34,7 @@ spa.model = (function () {
 		} 
 	};
 
-	makePerson = function ( person_map ) {
+	var makePerson = function ( person_map ) {
     	var person,
         	cid 	= person_map.cid,
         	css_map = person_map.css_map,
