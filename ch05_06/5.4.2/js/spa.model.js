@@ -23,7 +23,7 @@ spa.model = (function () {
 
     	isFakeData = true,
 
-    	personProto, makeCid, people, initModule;
+    	personProto, makePerson, people, initModule;
 
 	personProto = {
     	get_is_user : function () {
@@ -34,7 +34,7 @@ spa.model = (function () {
 		} 
 	};
 
-	var makePerson = function ( person_map ) {
+	makePerson = function ( person_map ) {
     	var person,
         	cid 	= person_map.cid,
         	css_map = person_map.css_map,
